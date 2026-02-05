@@ -1,9 +1,7 @@
 # project5
 OOP Horse Race
 
-# U
-## M
-### L
+## UML Diagram
 ```mermaid
 classDiagram
 
@@ -26,3 +24,4 @@ class Race {
 
 Race --> Horse
 ```
+## Algorithm
