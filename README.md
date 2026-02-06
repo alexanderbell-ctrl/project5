@@ -8,7 +8,9 @@ classDiagram
 class Horse {
     string name
     int position
+    int index
     Horse()
+    Horse_init(int index, int track_length)
     isWinner() bool
     advance()
     printLane()
@@ -26,21 +28,26 @@ Race --> Horse
 ```
 ## Algorithm
 ### Horse
-- Horse Constructor
+- in constructor
+```
+set position 0
+track_length 15
 ```
 
+- init (int index, int track_length)
 ```
-- advance (int horseNum, int* horse_positon)
-```
-generate random num 1-2
-if 1:
-  nada
-if 2:
-  value of horse_position @ *int horseNum* = +1
-
+my index = index
+my track_length = track_length
+my position = 0
 ```
 
-- printLane (int horseNum, int* horse_position)
+- advance
+```
+generate random num 0-1
+add num to position
+```
+
+- printLane ()
 ```
 for numbers 0->*horse_position*:
     print "*"
@@ -49,7 +56,7 @@ for numbers *horse_position* < 14:
     print "*"
 ```
 
-- isWinner (int horseNum, int* horse_position)
+- isWinner ()
 ```
 if (value of *horse_position* @ *horseNum* == 14):
   return True
@@ -61,9 +68,23 @@ in header
 ```
 set constant NUM_HORSES to 5
 set constant TRACK_LENGTH to 15
-
 ```
 in constructor
 ```
-
+go through each horse
+initialize horse
 ```
+
+- Race.start()
+```
+keepGoing is true
+while:
+    for every horse:
+        advance
+        printLane
+        if win:
+            stop
+```
+
+
+
