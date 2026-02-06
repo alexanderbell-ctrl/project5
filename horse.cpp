@@ -14,8 +14,7 @@ void Horse::Horse_init(int index, int trackLength) {
 } //end init
 
 void Horse::advance() {
-	std::srand(std::time(NULL));
-	int coin_flip = (std::rand() %1);
+	int coin_flip = (std::rand() %2);
 	Horse::position += coin_flip;
 } //end advance
 
@@ -33,9 +32,9 @@ void Horse::printLane() {
 } //end printLane
 
 bool Horse::isWinner() {
-	if(Horse::position == Horse::track_length) {
-		return true;
+	if(Horse::position == Horse::track_length) {	
 		std::cout << "Horse " << Horse::index << "wins!" << std::endl;
+		return true;
 	} //end if
 	else {
 		return false;
