@@ -1,7 +1,6 @@
 #include <iostream>
+#include <ctime>
 #include "horse.h"
-
-std::srand(std::time(NULL));
 
 Horse::Horse() {
 	Horse::position = 0;
@@ -9,12 +8,13 @@ Horse::Horse() {
 	Horse::track_length = 0;
 } //end Horse constructor
 
-void Horse::init(int index, int trackLength) {
+void Horse::Horse_init(int index, int trackLength) {
 	Horse::index = index;
-	Horse::track_length = tracklength;
+	Horse::track_length = trackLength;
 } //end init
 
 void Horse::advance() {
+	std::srand(std::time(NULL));
 	int coin_flip = (std::rand() %1);
 	Horse::position += coin_flip;
 } //end advance

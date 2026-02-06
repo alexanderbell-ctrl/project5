@@ -1,7 +1,7 @@
 #include <iostream>
 #include "horse.h"
 
-void testHorse(int index, int track_length);
+void testHorse();
 
 int main() {
 	std::cout << "OOP Horse Race" << std::endl;
