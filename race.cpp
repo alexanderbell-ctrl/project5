@@ -3,7 +3,7 @@
 
 Race::Race() {
 	for(int i = 0; i < NUM_HORSES; i++) {
-		horses[i].Horse_init(i, TRACK_LENGTH);
+		horse[i].Horse_init(i, TRACK_LENGTH);
 	} //end for
 } //end race
 
@@ -12,9 +12,9 @@ void Race::start() {
 	bool keepGoing = true;
 	while(keepGoing) {
 		for(int i = 0; i < NUM_HORSES; i++) {
-			horses[i].advance();
-			horses[i].printLane();
-			if(horses[i].isWinner()) {
+			horse[i].advance();
+			horse[i].printLane();
+			if(horse[i].isWinner()) {
 				keepGoing = false;
 			} //end if
 		} //end for
