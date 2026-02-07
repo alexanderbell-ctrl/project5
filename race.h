@@ -3,11 +3,11 @@
 
 class Race {
 	private:
-		int NUM_HORSES;
+		const static int NUM_HORSES = 15;
 		Horse horse[NUM_HORSES];
-		int TRACK_LENGTH;
+		int TRACK_LENGTH = 15;
 	public:
-		void Race()
+		Race()
 		void advance()
 }
 
