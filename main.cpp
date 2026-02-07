@@ -1,18 +1,22 @@
 #include <iostream>
 #include <ctime>
 #include "horse.h"
+#include "race.h"
 
-void testHorse();
+//void testHorse();
 
 int main() {
 	std::srand(std::time(NULL));	
 	std::cout << "OOP Horse Race" << std::endl;
 
-	testHorse();
+//	testHorse();
+	Race race;
+	race.start();
 
 	return 0;
 }
 
+/*
 void testHorse() {
 	Horse h;
 	h.Horse_init(1, 15);
@@ -25,3 +29,4 @@ void testHorse() {
 		}
 	}
 }
+*/

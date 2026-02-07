@@ -7,8 +7,8 @@ class Race {
 		Horse horse[NUM_HORSES];
 		int TRACK_LENGTH = 15;
 	public:
-		Race()
-		void advance()
+		Race();
+		void race();
 }
 
 #endif
