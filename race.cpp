@@ -3,7 +3,7 @@
 
 Race::Race() {
 	for(int i = 0; i < NUM_HORSES; i++) {
-		horse[i].Horse_init(i, TRACK_LENGTH);
+		horse[i].Horse_init(i+1, TRACK_LENGTH);
 	} //end for
 } //end race
 
