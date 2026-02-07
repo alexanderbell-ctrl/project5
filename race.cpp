@@ -1,3 +1,4 @@
+#include <iostream>
 #include "race.h"
 #include "horse.h"
 
@@ -18,6 +19,7 @@ void Race::start() {
 				keepGoing = false;
 			} //end if
 		} //end for
+		std::cout << std::endl;
 	} //end while
 } //end start
 
